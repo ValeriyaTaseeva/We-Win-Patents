@@ -16,23 +16,44 @@ body {
     color: #FFFFFF;
 }
 
-.block-services{
+.block-services {
+    width: 1180px;
     margin-top: 35px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    grid-template-rows: repeat(auto-fill, 380px);
+    grid-gap: 20px;
 }
 
 .box-service {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 380px;
-    height: 380px;
-    background:  #16273d;
-    position:relative;
-    margin-bottom: 20px;
+    text-decoration: none;
+    /* width: 380px;
+    height: 380px; */
+    background: #16273d;
+    position: relative;
+}
+
+.box-service:hover .box-service__icon {
+    opacity: 100%;
+}
+
+.box-service:hover .box-service__title {
+    color: #FFE195;
+}
+
+.box-service:hover .box-service__text {
+    color: #FFFFFF;
+}
+
+.box-service:hover .box-service__line {
+    background: #FFE195;
+}
+
+.box-service:hover .box-service__button {
+    background: #000000;
 }
 
 .box-service__icon {
@@ -40,11 +61,7 @@ body {
     height: 41px;
     margin-top: 73px;
     margin-bottom: 26px;
-    opacity: 50%;   
-}
-
-.box-service__icon:hover {
-    opacity: 100%;
+    opacity: 50%;
 }
 
 .box-service__title {
@@ -84,7 +101,6 @@ body {
     background-color: #2d3a52;
     position: absolute;
     bottom: 20px;
-
 }
 
 .box-service__button {
@@ -96,5 +112,5 @@ body {
     letter-spacing: 1px;
     color: #FFFFFF;
     opacity: 40%;
-    background: #2D3A52; 
+    background: #2D3A52;
 }
